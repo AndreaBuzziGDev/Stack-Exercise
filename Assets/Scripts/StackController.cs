@@ -50,11 +50,19 @@ public class StackController : MonoBehaviour
 
         if (StackInstance != null)
         {
-            float poppedValue = StackInstance.Pop();
-            Debug.Log("Current Popped Value: " + poppedValue);
-            Debug.Log("Current Stack Size: " + StackInstance.Size);
+            if (StackInstance.Size > 0)
+            {
+                float poppedValue = StackInstance.Pop();
+                Debug.Log("Current Popped Value: " + poppedValue);
+                Debug.Log("Current Stack Size: " + StackInstance.Size);
 
-            return poppedValue;
+                return poppedValue;
+            }
+            else
+            {
+                Debug.Log("Current Stack is Empty, cannot pop.");
+                return 0.0f;
+            }
         }
         else
         {
@@ -67,11 +75,19 @@ public class StackController : MonoBehaviour
     {
         if (StackInstance != null)
         {
-            float peekedValue = StackInstance.Peek();
-            Debug.Log("Current Peeked Value: " + peekedValue);
-            Debug.Log("Current Stack Size: " + StackInstance.Size);
+            if (StackInstance.Size > 0)
+            {
+                float peekedValue = StackInstance.Peek();
+                Debug.Log("Current Peeked Value: " + peekedValue);
+                Debug.Log("Current Stack Size: " + StackInstance.Size);
 
-            return peekedValue;
+                return peekedValue;
+            }
+            else
+            {
+                Debug.Log("Current Stack is Empty, cannot peek.");
+                return 0.0f;
+            }
         }
         else
         {
@@ -90,7 +106,7 @@ public class StackController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Stack is null, cannot Peek.");
+            Debug.Log("Stack is null, cannot check if it is empty.");
             return false;
         }
     }
@@ -123,6 +139,9 @@ public class StackController : MonoBehaviour
         {
             case eStackType.chain:
                 result = new ChainedStack<float>();
+                break;
+            case eStackType.list:
+                result = new ListStack<float>();
                 break;
             default:
                 result = null;

@@ -6,7 +6,7 @@ public abstract class IStack<T>
 {
     //SIZE
     protected int size = 0;
-    public int Size { get { return size; } }
+    public virtual int Size { get { return size; } }
 
     //PUSH
     public abstract void Push(T myData);//TODO: USE GENERALIZATION
