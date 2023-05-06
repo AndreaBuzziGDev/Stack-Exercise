@@ -852,7 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa14f98b564f66408710e90aac0b88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StackType: 0
+  StackType: 1
 --- !u!4 &1106902784
 Transform:
   m_ObjectHideFlags: 0

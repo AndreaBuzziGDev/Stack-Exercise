@@ -36,7 +36,9 @@ public class StackController : MonoBehaviour
 
         if (StackInstance != null)
         {
+
             StackInstance.Push(myRandomVal);
+            Debug.Log("Added value: " + myRandomVal + " To Stack");
             Debug.Log("Current Stack Size: " + StackInstance.Size);
         }
         else
