@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\ChainedStack.cs" />
     <Compile Include="Assets\Scripts\ChainedStackItem.cs" />
     <Compile Include="Assets\Scripts\UIController.cs" />
+    <Compile Include="Assets\Scripts\ListStack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
